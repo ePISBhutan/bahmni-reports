@@ -37,7 +37,7 @@ FROM
           AND leaf_concept_name.concept_name_type = 'FULLY_SPECIFIED'
      JOIN (SELECT 'M' AS gender
            UNION SELECT 'F' AS gender
-           UNION SELECT 'O' AS gender) gender
+          ) gender
    WHERE rag.report_group_name = '#ageGroupName#'
   ) AS reference_data
   LEFT JOIN (SELECT
